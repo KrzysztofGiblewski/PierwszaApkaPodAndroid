@@ -17,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         setupViews();
-        textViewHello.setText("asdfghjklgggggggggg;");
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                textViewHello.setText("działa;");
 
             }
         });
