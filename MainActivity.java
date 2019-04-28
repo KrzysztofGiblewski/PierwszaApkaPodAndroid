@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 int druga = Integer.valueOf(String.valueOf(editTextDruga.getText()));
 
 
-//                int wynikDodawania = dodawanie.wynik(editTextPierwsza,editTextDruga);
                 int wynikDodawania = dodawanie.wynik(pierwsza, druga);
 
                 textViewHello.setText(pierwsza + " + " + druga + " = " + wynikDodawania);
