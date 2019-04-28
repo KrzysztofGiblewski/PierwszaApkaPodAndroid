@@ -22,22 +22,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         setupViews();
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Dodawanie dodawanie = new Dodawanie();
 
-                TextView editTextPierwsza = (TextView) findViewById(R.id.editTextPierwsza);
-                TextView editTextDruga = (TextView) findViewById(R.id.editTextDruga);
-                int pierwsza = 6;
-                int druga = 10;
+                editTextPierwsza = (EditText) findViewById(R.id.editTextPierwsza);
+                editTextDruga = (EditText) findViewById(R.id.editTextDruga);
+                int pierwsza = Integer.valueOf(String.valueOf(editTextPierwsza.getText()));
+                int druga = Integer.valueOf(String.valueOf(editTextDruga.getText()));
 
 
 //                int wynikDodawania = dodawanie.wynik(editTextPierwsza,editTextDruga);
-                int wynikDodawania = dodawanie.wynik(5555, 5);
+                int wynikDodawania = dodawanie.wynik(pierwsza, druga);
 
-                textViewHello.setText("wynik dodawania= " + wynikDodawania);
+                textViewHello.setText(pierwsza + " + " + druga + " = " + wynikDodawania);
                 przepisanaPierwsza.setText(String.valueOf(pierwsza));
                 przepisanaDruga.setText(String.valueOf(druga));
 
