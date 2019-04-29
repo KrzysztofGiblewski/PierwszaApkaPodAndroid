@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewHello;
     private EditText editTextPierwsza;
     private EditText editTextDruga;
-    private TextView przepisanaPierwsza;
-    private TextView przepisanaDruga;
+    private TextView przepisanaPierwsza; //na razie nie urzywane tylko do kontroli
+    private TextView przepisanaDruga;  //na razie nie urzywane tylko do kontroli
 
 
     @Override
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupViews();
 
-        editTextPierwsza = (EditText) findViewById(R.id.editTextPierwsza);
+        editTextPierwsza = (EditText) findViewById(R.id.editTextPierwsza);  //łącze edittextpierwszy po id z edittekstpierwszy
         editTextDruga = (EditText) findViewById(R.id.editTextDruga);
 
 
@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dodawanie dodawanie = new Dodawanie();
+                Dodawanie dodawanie = new Dodawanie(); //inicjalizuje klase dodawanie
 
-                int pierwsza = Integer.valueOf(String.valueOf(editTextPierwsza.getText()));
+                int pierwsza = Integer.valueOf(String.valueOf(editTextPierwsza.getText()));  // twoze zmienna pierwsza i przepisuje wartość edittextpierwszy
                 int druga = Integer.valueOf(String.valueOf(editTextDruga.getText()));
 
-                int wynikDodawania = dodawanie.wynikDodawania(pierwsza, druga);
-                textViewHello.setText(pierwsza + " + " + druga + " = " + wynikDodawania);
+                int wynikDodawania = dodawanie.wynikDodawania(pierwsza, druga); //robie zmienna wynikDodawania i urzywajac metody wynik dodawania nadaje jej wartosc
+                textViewHello.setText(pierwsza + " + " + druga + " = " + wynikDodawania); //i podstawiam tekst pod tekstviwhello
 
             }
         });
