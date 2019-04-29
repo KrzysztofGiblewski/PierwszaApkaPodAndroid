@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 int pierwsza = Integer.valueOf(String.valueOf(editTextPierwsza.getText()));
                 int druga = Integer.valueOf(String.valueOf(editTextDruga.getText()));
 
-                int wynikDodawania = dodawanie.wynik(pierwsza, druga);
+                int wynikDodawania = dodawanie.wynikDodawania(pierwsza, druga);
                 textViewHello.setText(pierwsza + " + " + druga + " = " + wynikDodawania);
 
             }
@@ -47,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Mnozenie mnozenie = new Mnozenie();
+
+                int pierwsza = Integer.valueOf(String.valueOf(editTextPierwsza.getText()));
+                int druga = Integer.valueOf(String.valueOf(editTextDruga.getText()));
+
+                int wynikMnozenia = mnozenie.wynikMnozenia(pierwsza, druga);
+                textViewHello.setText(pierwsza + " * " + druga + " = " + wynikMnozenia);
 
             }
         });

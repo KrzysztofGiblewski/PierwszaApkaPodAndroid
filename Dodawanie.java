@@ -5,7 +5,7 @@ public class Dodawanie {
     private int druga;
     private int wynik;
 
-    public int wynik (int pierwsza,int druga) {
+    public int wynikDodawania(int pierwsza, int druga) {
         wynik=pierwsza+druga;
         return wynik;
     }
