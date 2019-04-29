@@ -59,11 +59,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setupViews() {
+        //dodaje wszystko co sie wyswietla
         button1 = (Button) findViewById(R.id.button1);
         buttonMnozenie = (Button) findViewById(R.id.buttonMnozenie);
         textViewHello = (TextView) findViewById(R.id.textViewHello);
+        // to musi byc editText zeby przyjmował wpisywane liczby
         editTextPierwsza = (EditText) findViewById(R.id.editTextPierwsza);
         editTextDruga = (EditText) findViewById(R.id.editTextDruga);
+        //te dwie tylko do sprawdzania testowania
         przepisanaPierwsza = (TextView) findViewById(R.id.przepisanaPierwsza);
         przepisanaDruga = (TextView) findViewById(R.id.przepisanaDruga);
 
